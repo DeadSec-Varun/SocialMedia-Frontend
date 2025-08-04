@@ -1,9 +1,9 @@
 {
   "rewrites": [
-    { "source": "/(.*)", "destination": "/" },
     { "source": "/5001/(.*)", "destination": "http://16.171.100.116:5001/$1" },
     { "source": "/3001/(.*)", "destination": "http://16.171.100.116:3001/$1" },
     { "source": "/4001/(.*)", "destination": "http://16.171.100.116:4001/$1" },
-    { "source": "/8002/(.*)", "destination": "http://16.171.100.116:8002/$1" }
+    { "source": "/8002/(.*)", "destination": "http://16.171.100.116:8002/$1" },
+    { "source": "/(.*)", "destination": "/" }
   ]
 }
