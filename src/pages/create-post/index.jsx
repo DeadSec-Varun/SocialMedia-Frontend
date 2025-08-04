@@ -94,7 +94,7 @@ const CreatePost = () => {
         // scheduledDate,
       };
 
-      await axios.post('http://16.171.100.116:4001/api/post', {content, user_id:localStorage.getItem('user_id')}, {
+      await axios.post('/4001/api/post', {content, user_id:localStorage.getItem('user_id')}, {
         withCredentials: true,
         headers: {
           'Content-Type': 'application/json',

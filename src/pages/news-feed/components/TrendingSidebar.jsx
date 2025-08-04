@@ -13,7 +13,7 @@ const TrendingSidebar = () => {
 
   const userId = localStorage.getItem('user_id');
   const { data, error, isLoading } = useSWR(
-    userId ? `http://16.171.100.116:5001/api/feed/recomended/${userId}` : null
+    userId ? `/5001/api/feed/recomended/${userId}` : null
     ,
     fetcher,
     {
@@ -27,7 +27,7 @@ const TrendingSidebar = () => {
   async function followUser(id) {
     if (!userId || followedUsers.includes(id)) return;
     try {
-      await axios.post(`http://16.171.100.116:4001/api/user/follow`, {
+      await axios.post(`/4001/api/user/follow`, {
         follower_id: id,
         following_id: userId
       });
