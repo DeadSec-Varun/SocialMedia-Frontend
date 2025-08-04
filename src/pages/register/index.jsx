@@ -56,7 +56,7 @@ const Register = () => {
   const handleRegistration = async () => {
     setIsLoading(true);
     try {
-      const res = await axios.post('http://localhost:3001/api/register', formData);
+      const res = await axios.post('http://16.171.100.116:3001/api/register', formData);
       localStorage.setItem('isAuthenticated', 'true');
       localStorage.setItem('user_id', res.data.user_id);
       navigate('/news-feed');

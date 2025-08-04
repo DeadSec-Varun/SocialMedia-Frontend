@@ -27,10 +27,10 @@ const NewsFeed = () => {
     async function fetchUserFeed() {
       setFeedLoading(true);
       const userId = localStorage.getItem('user_id');
-      const res = await axios.get(`http://localhost:5001/api/feed/${userId}`, { withCredentials: true });
+      const res = await axios.get(`http://16.171.100.116:5001/api/feed/${userId}`, { withCredentials: true });
       setPosts(res.data.feedData);
       setFeedLoading(false);
-      eventSource = new EventSource(`http://localhost:8002/notifications/sse/${userId}`);
+      eventSource = new EventSource(`http://16.171.100.116:8002/notifications/sse/${userId}`);
       eventSource.onmessage = (event) => {
         const data = JSON.parse(event.data);
         toast.info(data.message);

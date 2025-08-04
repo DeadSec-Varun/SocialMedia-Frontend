@@ -14,7 +14,7 @@ const StoryCarousel = () => {
 
   const userId = localStorage.getItem('user_id');
   const { data, error, isLoading } = useSWR(
-    userId ? `http://localhost:5001/api/feed/stories/${userId}` : null,
+    userId ? `http://16.171.100.116:5001/api/feed/stories/${userId}` : null,
     fetcher,
     {
       dedupingInterval: 10000,    // 10s no duplicate fetches
